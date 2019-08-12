@@ -1,0 +1,268 @@
+html,body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-size: 16px;
+  --green: #00ac50;
+  --yellow: #ffb800;
+  --blue: #0087f8;
+  --red: #ff1f2b;
+  --darkgrey: #343a40;
+}
+
+#fab {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  width: 175px;
+  height: 45px;
+  border-radius: 30px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #dedede;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-size: 1;
+  transition: all .3s;
+}
+#fab:hover {
+  background-color: var(--green);
+  color: white;
+  border-color: var(--green);
+}
+
+#fab i {
+  padding: 5px;
+}
+
+.mdcard {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all .3s;
+}
+.mdcard:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+#nav {
+  background-color: white;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  padding: 0;
+}
+
+#nav a, #nav li {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+#nav a:not(.btn) {
+  padding: .5rem;
+  color: var(--red);
+  height: 56px;
+  border-width: 0;
+  border-bottom-width: 3px;
+  border-style: solid;
+  border-color: transparent;
+}
+#nav a:not(.btn):hover {
+  color: #df0016;
+}
+
+#nav li.active a, #nav li:hover a:not(.btn) {
+  border-color: var(--red);
+  border-width: 0;
+  border-bottom-width: 3px;
+  border-style: solid;
+}
+
+#nav img {
+  height: 30px;
+  width: auto;
+}
+
+#nav #navbarMenu {
+  height: 100%;
+}
+
+#nav ul {
+  margin-right: .5rem;
+  margin-left: auto;
+  height: 100%;
+}
+
+#main {
+  min-height: 100%;   
+}
+
+#main img, #main h1 {
+  display: inline-block;
+}
+
+#main section {
+  min-height: calc(100vh - 56px);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: 0;
+}
+
+#main section:nth-child(1) {
+  padding-top: 56px;
+}
+
+section#welcome {
+  background-color: #fafafa;
+  color: black;
+}
+
+section#agenda {
+  background-image:
+    linear-gradient(to bottom, rgba(0,0,0,.5), rgba(0,0,0,.75)),
+    linear-gradient(to bottom, var(--green), var(--green));
+  color: white;
+}
+
+section#speakers {
+  background-image:
+    linear-gradient(to bottom, rgba(0,0,0,.5), rgba(0,0,0,.75)),
+    linear-gradient(to bottom, var(--yellow), var(--yellow));
+  color: white;
+}
+
+section#place {
+  background-image:
+    linear-gradient(to bottom, rgba(0,0,0,.5), rgba(0,0,0,.75)),
+    linear-gradient(to bottom, var(--blue), var(--blue));
+  color: white;
+}
+
+section#team {
+  background-image:
+    linear-gradient(to bottom, rgba(0,0,0,.5), rgba(0,0,0,.75)),
+    linear-gradient(to bottom, var(--red), var(--red));
+  color: white;
+}
+
+section#sponsors {
+  background-color: #fafafa;
+  color: black;
+}
+
+section#welcome a, section#sponsors a {
+  color: var(--darkgrey);
+}
+
+section#agenda a, section#speakers a, section#place a, section#team a {
+  color: white;
+}
+
+section#welcome a.btn-outline-dark:hover {
+  color: white;
+}
+section#agenda a.btn-outline-light:hover {
+  color: var(--green);
+}
+section#speakers a.btn-outline-light:hover{
+  color: var(--yellow);
+}
+section#place a.btn-outline-light:hover{
+  color: var(--blue);
+}
+section#team a.btn-outline-light:hover {
+  color: var(--red);
+}
+section#sponsors a.btn-outline-dark:hover {
+  color: white;
+}
+
+.btn-danger {
+  background-color: var(--red);
+  border-color: #df0016;
+}
+
+footer {
+  background-color: #0087f7;
+  color: white;
+  padding: 56px 0;
+}
+
+#place img {
+  max-width: 300px;
+  height: auto;
+  padding: 5px 5px 5px 0;
+}
+
+#team .person, #sponsors .company {
+  height: 232px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#team .person .photo img, #sponsors .company .photo img {
+  width: 130px;
+  height: 130px;
+  border-radius: 100%;
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+#team .person .info, #sponsors .company .info {
+  padding-top: 75px;
+  padding-bottom: 10px;
+  margin-top: -65px;
+  background-color: white;
+  border-radius: 4px;
+  color: black;
+}
+
+#team .person .info .name, #sponsors .company .info .name {
+  font-weight: bold;
+}
+
+#team .person .info .company, #sponsors .company .info .company {
+  color: darkgrey;
+}
+
+#team .person .info .company img {
+  max-height: 30px;
+  width: auto;
+}
+
+#team .person .info .socialmedia, #sponsors .company .info .socialmedia {
+  padding: 5px;
+}
+#team .person .info .socialmedia img, #sponsors .company .info .socialmedia img {
+  width: 20px;
+  height: 20px;
+}
+
+#team .person:hover .info {
+  background-color: var(--red);
+  color: white;
+}
+
+#team .person:hover .company {
+  color: white;
+}
+
+#team .person:hover .photo img {
+  border-color: var(--red);
+}
+
+
+
