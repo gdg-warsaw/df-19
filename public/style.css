@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 html,body {
   width: 100%;
   height: 100%;
@@ -105,10 +109,15 @@ body {
 #main {
   min-height: 100%;   
 }
-
-#main h1 {
+h1 {
   display: inline-block;
-  font-weight: 700;
+  font-weight: 600;
+  line-height: 1;
+  font-size: 4rem;
+}
+h1 span {
+  font-size: 1.6rem;
+  line-height: 1;
 }
 #main img {
   display: inline-block;
@@ -130,14 +139,19 @@ body {
 }
 
 section#welcome {
-  /*background-color: #fafafa;*/
+  background-color: white;
   color: black;
   background-image:
     linear-gradient(to bottom, rgba(255,255,255,.5), rgba(255,255,255,.75)),
-    url('/img/website/section-light-background.jpg');;
+    url('/img/website/devfest-artwork.svg');;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center
+}
+
+.material-icons {
+  vertical-align: middle;
+  padding-bottom: 5px;
 }
 
 section#agenda {
@@ -150,7 +164,7 @@ section#agenda {
 section#speakers {
   background-image:
     linear-gradient(to bottom, rgba(0,0,0,.5), rgba(0,0,0,.75)),
-    linear-gradient(to bottom, var(--yellow), var(--yellow));
+    linear-gradient(to bottom, var(--green), var(--green));
   color: white;
 }
 
@@ -169,8 +183,17 @@ section#team {
 }
 
 section#sponsors {
-  background-color: #fafafa;
-  color: black;
+  background-image:
+    linear-gradient(to bottom, rgba(0,0,0,.5), rgba(0,0,0,.75)),
+    linear-gradient(to bottom, var(--red), var(--red));
+  color: white;
+}
+section#sponsors .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
 }
 
 section#welcome a, section#sponsors a {
@@ -188,7 +211,7 @@ section#agenda a.btn-outline-light:hover {
   color: var(--green);
 }
 section#speakers a.btn-outline-light:hover{
-  color: var(--yellow);
+  color: var(--green);
 }
 section#place a.btn-outline-light:hover{
   color: var(--blue);
@@ -197,6 +220,8 @@ section#team a.btn-outline-light:hover {
   color: var(--red);
 }
 section#sponsors a.btn-outline-dark:hover {
+  background-color: var(--red);
+  border-color: var(--red);
   color: white;
 }
 
@@ -218,7 +243,7 @@ footer {
 }
 
 #team .person, #sponsors .company {
-  height: 232px;
+  height: 279px;
   text-align: center;
   margin-bottom: 2rem;
 }
@@ -243,7 +268,7 @@ footer {
 }
 
 #team .person .info .name, #sponsors .company .info .name {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 #team .person .info .company, #sponsors .company .info .company {
